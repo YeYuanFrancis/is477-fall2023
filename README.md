@@ -7,14 +7,13 @@ This repository serves as reproducing specific results from the paper "Retiring 
 
 ### Origin of Datasets
 
-1. **UCI Adult Dataset**: This dataset was obtained from the UCI Machine Learning Repository.
+1. **UCI Adult Dataset**: This dataset was obtained from the UCI Machine Learning Repository.Becker,Barry and Kohavi,Ronny. (1996). Adult. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20.
   
-2. **Reconstructed Dataset**: This dataset was obtained from [https://cps.ipums.org/].
+2. **Reconstructed Dataset**: This dataset was was derived from IPUMS CPS data, the dataset is part of the Folktables repository [https://github.com/socialfoundations/folktables/blob/main/adult_reconstruction.csv].
 
 ### Copyright and Licensing
 
 1. **UCI Adult Dataset**: The dataset is generally available for public use for educational and research purposes. This dataset is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.
-  
 2. **Reconstructed Dataset**: The data itself is governed by the terms of use provided by the Census Bureau. The data are intended for replication purposes only. Individuals analyzing the data for other purposes must submit a separate data extract request directly via IPUMS CPS. Individuals are not to redistribute the data without permission.
 
 ### Justification for Inclusion/Exclusion of Datasets
@@ -39,3 +38,4 @@ With its attribution, the license says that people who use your data and models 
 
 References:
 Ding, F., Hardt, M., Miller, J., & Schmidt, L. (2022). Retiring Adult: New Datasets for Fair Machine Learning. arXiv. https://doi.org/10.48550/arXiv.2108.04884.
+Becker,Barry and Kohavi,Ronny. (1996). Adult. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20.
