@@ -34,6 +34,30 @@ The data and models in this repository are licensed under the Creative Commons A
 
 With its attribution, the license says that people who use your data and models must give you credit, link back to the license, and say if they made any changes. This makes sure that people who contributed are properly thanked. CC BY 4.0 is very liberal, like the MIT License for our software. It lets both academic and business users use, change, and share the licensed data. The license can be used anywhere in the world, even if your country doesn't have copyright rules that protect it.
 
+## Reproducing
+
+Here are instructions for you to set up your enviroment and run the script
+
+### Prerequisites
+
+Ensure you have Python 3.x installed on your machine.
+If you decide to use Docker:
+Install Docker Desktop on your machine.
+Create a Docker Hub account if you don't already have one.
+
+### Set Up
+
+1, Clone this repository to your local machine.
+2, If you have Docker installed, run following:
+   docker run --rm -v ${PWD}:/is477 username/is477-fall2023 python prepare_data.py  
+   If not: 
+   - create a virtual environment 
+   - Install the required dependencies: pip install -r requirements.txt
+   - Run the script: python prepare_data.py
+Reminder: 
+    Make sure to replace placeholders (like `username`) with the actual values.
+Output:
+Upon successful execution, the script will download and verify the datasets.    
 
 
 References:
