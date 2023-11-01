@@ -51,13 +51,40 @@ Create a Docker Hub account if you don't already have one.
 2, If you have Docker installed, run following:
    docker run --rm -v ${PWD}:/is477 username/is477-fall2023 python prepare_data.py  
    If not: 
-   - create a virtual environment 
-   - Install the required dependencies: pip install -r requirements.txt
+   - create a virtual environment：'python -m venv .venv'
+   - Activate the virtual environment: For Windows: '.venv\Scripts\activate'
+   - Install the required dependencies: 'pip install -r requirements.txt'
    - Run the script: python prepare_data.py
+   Reproducing Regression Results
+3， To reproduce the regression results for the UCI Adult dataset, run:
+    'python scripts/reproduce_adult.py'
+    To reproduce the regression results using the reconstructed data, run:
+    'python scripts/reproduce_reconstructed.py'
+    The results will be saved in the results directory.
 Reminder: 
     Make sure to replace placeholders (like `username`) with the actual values.
 Output:
 Upon successful execution, the script will download and verify the datasets.    
+
+
+## Analysis:
+
+### Regression Results:
+The regression results for the UCI Adult data are as follows:
+Accuracy: 0.847, 0.915, 0.925
+
+The regression results for the reconstructed data are:
+Accuracy: 0.938,0.906,0.93
+
+a. Do the regression results match those reported in the original paper for the UCI Adult data?
+Yes, the original logistic regression of UCI Adult dataset is 0.85 which is really close to 0.847.
+
+b. Do the regression results using the reconstructed data with the default threshold match the results of the regression using the original UCI Adult data?
+No, the original logistic regression of UCI Adult dataset is 0.85 which is different from 0.938
+
+c. Referring back to Section 1 of the paper, the effect of the income threshold on prediction accuracy is
+In summary, the choice of the income threshold has a significant impact on both prediction accuracy and the observed fairness of the predictions. Different thresholds can lead to different observations regarding the fairness and accuracy of prediction models. The threshold of $50k used in the UCI Adult dataset, in particular, can lead to skewed observations given its high value relative to the median income.
+
 
 
 References:
