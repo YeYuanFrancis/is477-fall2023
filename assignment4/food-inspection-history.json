@@ -1,0 +1,819 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Risk using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Risk using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Risk 3 (low)",
+          "Risk 3   (low)",
+          "Risk 3  (low)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Risk 3 (low)"
+      },
+      {
+        "from": [
+          "Risk 1 (high)",
+          "Risk 1   (high)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Risk 1 (high)"
+      }
+    ],
+    "description": "Mass edit cells in column Risk"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression value.toDate()"
+  },
+  {
+    "op": "core/multivalued-cell-split",
+    "columnName": "Violations",
+    "keyColumnName": "Inspection ID",
+    "mode": "separator",
+    "separator": "|",
+    "regex": false,
+    "description": "Split multi-valued cells in column Violations"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "License #",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column License # using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "License #",
+          "expression": "value",
+          "columnName": "License #",
+          "from": 0,
+          "to": 3300000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": false,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "License #",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column License # using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "License #",
+          "expression": "value",
+          "columnName": "License #",
+          "from": 0,
+          "to": 3300000,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection ID using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "License #",
+          "expression": "value",
+          "columnName": "License #",
+          "from": 0,
+          "to": 3300000,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MOBILE FROZEN DESSERTS VENDOR",
+          "Mobile Frozen Desserts Vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MOBILE FROZEN DESSERTS VENDOR"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "STEVE'S 77 ICE CREAM",
+          "STEVES 77 ICE CREAM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STEVE'S 77 ICE CREAM"
+      },
+      {
+        "from": [
+          "SUPREME CATERING",
+          "Supreme Catering"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUPREME CATERING"
+      }
+    ],
+    "description": "Mass edit cells in column AKA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SUPREME CATERING",
+          "Supreme Catering"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUPREME CATERING"
+      },
+      {
+        "from": [
+          "STEVE'S 77 ICE CREAM",
+          "STEVES 77 ICE CREAM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STEVE'S 77 ICE CREAM"
+      },
+      {
+        "from": [
+          "KENDALL COLLEGE",
+          "Kendall College"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENDALL COLLEGE"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City State Zip",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "chicago,IL,60629",
+          "Chicago,IL,60629"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "chicago,IL,60629"
+      },
+      {
+        "from": [
+          "MAYWOOD,IL,60153",
+          "Maywood,IL,60153"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MAYWOOD,IL,60153"
+      },
+      {
+        "from": [
+          "CHicago,IL,60610",
+          "Chicago,IL,60610"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHicago,IL,60610"
+      }
+    ],
+    "description": "Mass edit cells in column City State Zip"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City State Zip",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column City State Zip using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City State Zip",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column City State Zip using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City State Zip",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column City State Zip by separator"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "City State Zip 1",
+    "newColumnName": "City",
+    "description": "Rename column City State Zip 1 to City"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "City State Zip 2",
+    "newColumnName": "State",
+    "description": "Rename column City State Zip 2 to State"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "City State Zip 3",
+    "newColumnName": "Zip",
+    "description": "Rename column City State Zip 3 to Zip"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column City using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "312chicago"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chicago"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cchicago"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chicago"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Chchicago"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chicago"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Chcicago"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chicago"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Chicagochicago"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chicago"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Chicagoi"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chicago"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Brideview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Broadview"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Oolympia Fields"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Olympia Fields"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Results",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Results using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Results",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Results using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SUPREME CATERING",
+          "SUPPREME CATERING",
+          "SUPREME CATERING COMPANY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUPREME CATERING"
+      },
+      {
+        "from": [
+          "LA QUEBRADA #5",
+          "LA QUIBRADA # 5"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LA QUEBRADA #5"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LITTLE LULU'S ITALIAN ICE",
+          "LITTLE LULU'S ITALIAN ICE INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LITTLE LULU'S ITALIAN ICE"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MCCORMICK PLACE",
+          "MCCORNICK PLACE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MCCORMICK PLACE"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Supreme Catering",
+          "Suppreme Catering",
+          "Supreme Catering Company"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Supreme Catering"
+      },
+      {
+        "from": [
+          "La Quebrada #5",
+          "La Quibrada # 5"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "La Quebrada #5"
+      }
+    ],
+    "description": "Mass edit cells in column AKA Name"
+  }
+]
